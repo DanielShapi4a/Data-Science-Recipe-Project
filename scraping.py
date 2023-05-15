@@ -29,3 +29,5 @@ import itertools
 
 import csv
 
+df = pd.read_csv('Most-updated-scrape.csv')
+scraping_functions.scatter_3d(df)

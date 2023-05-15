@@ -1477,3 +1477,19 @@ def predict_rating_mlp(df):
     print(f'Accuracy compared to test data: {accuracy:.3f}')
     
     return y_pred_rounded.flatten()
+
+
+def scatter_3d(df):
+
+    ax = plt.axes(projection='3d')
+
+    xdata = df['Rating']
+    ydata = df['Calories']
+    zdata = df['Total']
+
+    ax.set_xlabel('Rating')
+    ax.set_ylabel('Calories')
+    ax.set_zlabel('Total time')
+
+    ax.scatter3D(xdata, ydata, zdata, c=zdata, depthshade=False)
+    plt.show()

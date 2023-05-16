@@ -944,7 +944,8 @@ def clean_data_time(df):
             else:
                 df.drop(index, inplace=True)
 
-    # Save cleaned dataframe to new csv file
+    
+    df = df[(df['Prep'] >= 0) & (df['Cook'] >= 0) & (df['Total'] >= 0)]    # Save cleaned dataframe to new csv file
     #df = df.drop(columns='Unnamed')
     #df = df.drop(df.columns[0], axis=1)
     #print(df.columns)

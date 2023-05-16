@@ -2,7 +2,6 @@ import collections
 import pickle
 import re
 from statistics import LinearRegression
-#from statistics import LinearRegression, correlation
 import time
 from matplotlib.widgets import Lasso
 from numpy import average, shape
